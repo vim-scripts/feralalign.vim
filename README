@@ -1,0 +1,16 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=686
+
+Simple script that allows you to easily tab a section of spaces to a desired
+column; I.e. if you want all your comments to line up on virt col 41 try
+":FeralAlign 41" when your cursor is in a position to "ciw"; I.e. saves you
+from "ciw<tab><tab><tab>"etc. But that is about all this does (=
+
+Works with single lines or ranges. Ranges must be specified by a single column,
+block-wise visual selection; (i.e. "<ctrl-v>j"). So to align 5 lines, place
+your cursor in a good spot (where a "ciw" wont keel something important; i.e.
+spaces before the comment chars) and "<ctrl-v>4j:FeralAlign 41"; easy as that.
+
+Limitation: Aligns to the nearest tabstop.
+
+This script is possibly of academic value as a way to get a range command to
+preserve the cursors column.
